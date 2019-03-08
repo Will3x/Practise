@@ -45,22 +45,22 @@ public class Client {
         System.out.println(remote);
 
         System.out.println("====== Test 1 =========");
-        remote.turnAllOn();
+        remote.turnAllDevicesOn();
         System.out.println("-----------------------");
-        remote.turnAllOff();
+        remote.turnAllDevicesOff();
         System.out.println("=======================");
         System.out.println("\n");
 
         System.out.println("====== Test 2 =========");
         remote.increaseSound(1); // Receiver is off. Does nothing.
-        remote.turnOn(1);
+        remote.turnDeviceOn(1);
         remote.increaseSound(1); // Now it does work :)
         System.out.println("=======================");
         System.out.println("\n");
 
         System.out.println("====== Test 3 =========");
         remote.muteSound(1);
-        remote.turnAllOn();
+        remote.turnAllDevicesOn();
         remote.increaseSound(1); // Raise volume
         remote.undo(); // Lower volume
         System.out.println("=======================");

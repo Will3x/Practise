@@ -24,31 +24,31 @@ public class Remote {
         commandGroupList.add(slot, new CommandGroup(on, off, volumeUp, volumeDown, mute));
     }
 
-    public void removeCommands(int slot){
+    public void removeCommands(int slot) {
         commandGroupList.remove(slot);
     }
 
-    public void turnOn(int slot) {
+    public void turnDeviceOn(int slot) {
         Command turnOnCommand = commandGroupList.get(slot).getTurnOnCommand();
         turnOnCommand.execute();
         history.push(turnOnCommand);
     }
 
-    public void turnOff(int slot) {
+    public void turnDeviceOff(int slot) {
         Command turnOffCommand = commandGroupList.get(slot).getTurnOffCommand();
         turnOffCommand.execute();
         history.push(turnOffCommand);
     }
 
-    public void turnAllOn() {
-        for (CommandGroup c : commandGroupList){
+    public void turnAllDevicesOn() {
+        for (CommandGroup c : commandGroupList) {
             c.getTurnOnCommand().execute();
             history.push(c.getTurnOnCommand());
         }
     }
 
-    public void turnAllOff() {
-        for (CommandGroup c : commandGroupList){
+    public void turnAllDevicesOff() {
+        for (CommandGroup c : commandGroupList) {
             c.getTurnOffCommand().execute();
             history.push(c.getTurnOffCommand());
         }
@@ -66,7 +66,7 @@ public class Remote {
         history.push(volumeDownCommand);
     }
 
-    public void muteSound(int slot){
+    public void muteSound(int slot) {
         Command muteCommand = commandGroupList.get(slot).getMuteCommand();
         muteCommand.execute();
         history.push(muteCommand);
@@ -78,10 +78,10 @@ public class Remote {
 
     @Override
     public String toString() {
-        String s = "";
-        for (int i = 0; i < commandGroupList.size(); i++){
-            s += (i+1) + "[" + commandGroupList.get(i) + "]\n";
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < commandGroupList.size(); i++) {
+            s.append(i + 1).append("[").append(commandGroupList.get(i)).append("]\n");
         }
-        return s;
+        return s.toString();
     }
 }
