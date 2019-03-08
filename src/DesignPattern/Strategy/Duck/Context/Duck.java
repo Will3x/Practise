@@ -9,20 +9,15 @@ public abstract class Duck {
     private Quackable quackable;
     private Flyable flyable;
     private Diet diet;
-    private String name;
 
-    Duck(String name, Quackable quackable, Flyable flyable, Diet diet) {
-        this.name = name;
+    Duck(Quackable quackable, Flyable flyable, Diet diet) {
         this.quackable = quackable;
         this.flyable = flyable;
         this.diet = diet;
     }
 
     public abstract String getDisplay();
-
-    public String getName() {
-        return name;
-    }
+    public abstract String getName();
 
     public String swim() {
         return "Swimming..";

@@ -6,7 +6,7 @@ import DesignPattern.Strategy.Duck.Behaviour.Quackable.MuteQuack;
 
 public class DecoyDuck extends Duck {
     DecoyDuck() {
-        super("Decoy duck", new MuteQuack(), new NoFly(), new NoDiet());
+        super(new MuteQuack(), new NoFly(), new NoDiet());
     }
 
     @Override
@@ -14,4 +14,8 @@ public class DecoyDuck extends Duck {
         return "A wooden decoy duck.";
     }
 
+    @Override
+    public String getName() {
+        return "Decoy duck";
+    }
 }

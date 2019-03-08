@@ -6,12 +6,17 @@ import DesignPattern.Strategy.Duck.Behaviour.Quackable.Quack;
 
 public class Mallard extends Duck {
     Mallard() {
-        super("Mallard", new Quack(), new FlyWithWings(), new PlantDiet());
+        super(new Quack(), new FlyWithWings(), new PlantDiet());
     }
 
     @Override
     public String getDisplay() {
         return "Majestic duck";
+    }
+
+    @Override
+    public String getName() {
+        return "Mallard";
     }
 
 }

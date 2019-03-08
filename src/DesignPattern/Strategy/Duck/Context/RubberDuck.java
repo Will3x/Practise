@@ -5,8 +5,9 @@ import DesignPattern.Strategy.Duck.Behaviour.Flyable.NoFly;
 import DesignPattern.Strategy.Duck.Behaviour.Quackable.Squeak;
 
 public class RubberDuck extends Duck {
+
     RubberDuck() {
-        super("Rubber Duck", new Squeak(), new NoFly(), new NoDiet());
+        super(new Squeak(), new NoFly(), new NoDiet());
     }
 
     @Override
@@ -14,4 +15,8 @@ public class RubberDuck extends Duck {
         return "A yellow duckling.";
     }
 
+    @Override
+    public String getName() {
+        return "Rubber Duck";
+    }
 }
