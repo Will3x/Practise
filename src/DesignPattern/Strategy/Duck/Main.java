@@ -1,5 +1,7 @@
 package DesignPattern.Strategy.Duck;
 
+import DesignPattern.Strategy.Duck.Context.*;
+
 public class Main {
     public static void main(String[] args) {
 

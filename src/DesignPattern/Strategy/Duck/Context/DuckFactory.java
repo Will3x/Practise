@@ -1,8 +1,8 @@
-package DesignPattern.Strategy.Duck;
+package DesignPattern.Strategy.Duck.Context;
 
-class DuckFactory {
+public class DuckFactory {
 
-    Duck createDuck(){
+    public Duck createDuck(){
         int random = (int) (Math.random()*4);
 
         switch (random){

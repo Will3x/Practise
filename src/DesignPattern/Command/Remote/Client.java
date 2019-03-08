@@ -1,4 +1,4 @@
-package DesignPattern.Command.Remote.Client;
+package DesignPattern.Command.Remote;
 
 import DesignPattern.Command.Remote.Command.Calculator.*;
 import DesignPattern.Command.Remote.Command.Command;
