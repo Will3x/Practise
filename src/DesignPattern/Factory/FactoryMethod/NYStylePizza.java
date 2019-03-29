@@ -1,4 +1,4 @@
-package DesignPattern.Factory.FactoryMethod.Product;
+package DesignPattern.Factory.FactoryMethod;
 
 abstract class NYStylePizza extends Pizza {
 

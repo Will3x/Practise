@@ -1,11 +1,8 @@
-package DesignPattern.Factory.FactoryMethod.Factory;
-
-import DesignPattern.Factory.FactoryMethod.Product.NYCheesePizza;
-import DesignPattern.Factory.FactoryMethod.Product.Pizza;
+package DesignPattern.Factory.FactoryMethod;
 
 public class NYPizzaStore extends PizzaStore {
     @Override
-    public Pizza createPizza(String pizza) {
+    Pizza createPizza(String pizza) {
         switch (pizza){
             case "CheesePizza":
                 return new NYCheesePizza();

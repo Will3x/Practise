@@ -1,4 +1,4 @@
-package DesignPattern.Factory.FactoryMethod.Product;
+package DesignPattern.Factory.FactoryMethod;
 
 public abstract class Pizza {
 
@@ -17,13 +17,11 @@ public abstract class Pizza {
     }
 
     private void prepare() {
-        bake();
-        cut();
-        box();
-        System.out.println("Enjoy your " + name + "!");
+        System.out.println("Preparing " + name + "...");
+        System.out.println("Adding " + topping + "...");
     }
 
-    private void bake() {
+    void bake() {
         System.out.println("Baking the pizza in a hot oven...");
     }
 
@@ -31,7 +29,7 @@ public abstract class Pizza {
         System.out.println("Cutting the pizza...");
     }
 
-    private void box() {
+    void box() {
         System.out.println("Placing the pizza in a box...");
     }
 
